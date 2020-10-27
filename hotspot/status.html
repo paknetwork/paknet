@@ -1,0 +1,180 @@
+<html lang="en"><!--<![endif]--><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAK NET | status</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="style.mks.css">
+<link rel="stylesheet" href="icons.css" type="text/css" />
+ <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<div id="footer">
+</div>
+</div>
+<body>
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	<script type="text/javascript" src="/md5.js"></script>
+	
+<style media="print">body {display:none}</style><link rel="stylesheet" type="text/css" href="mt_null.css">
+</head>
+<body>
+</div>
+<div id="loginform" class="animated bounceInDown col-sm-12 text-center">
+<div id="header" class="row text-center">
+
+<div id="main" class="row">
+ $(endif)
+ <div class="form-signin ">
+ <center><img class="img-responsive da animated bounceInDown"width="240" height="60"  src="logo.png" alt="Hotspot Services"></center>	
+<div id="loginform" class="animated bounceInDown col-sm-12 text-center"> <font color="#FFF">
+ <p class="text-center">Best internet data service</p>
+  <p style="margin-top:-10px;margin-bottom:5px">
+<div class="main-menu">
+		<a class="login" href="status.html"><b>Status</b></a>
+		<a style="color:#ddd"class="voucher" href="voucher.html"><b>Voucher</b></a>
+		<a style="color:#ddd"class="service" href="about.html"><b>About</b></a>
+	</div> 
+	  <p style="margin-top:10px;margin-bottom:5px"></p>
+
+<title id="title"></title>
+$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<link rel="stylesheet" href="css/mikhmon-ui-light.css">
+<link rel="stylesheet" href="css/background.css">
+<link rel="icon" href="img/favicon.png" />
+<style>
+iframe  {float:left; height:22px; width:100%;}
+</style>
+<script language="JavaScript">
+<!--	
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+	if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+	popup = open('$(link-advert)', 'hotspot_advert', '');
+	setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+	if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+	window.close();
+	return false;
+    }
+    function readablizeBytes(bytes) {
+        var s = ['bytes', 'kb', 'MB', 'GB', 'TB', 'PB'];
+        var e = Math.floor(Math.log(bytes)/Math.log(1000));
+        return (bytes/Math.pow(1000, Math.floor(e))).toFixed(2)+" "+s[e];
+    }
+//-->
+</script>
+</head>
+<body class="background" bottommargin="0" topmargin="0" leftmargin="0" rightmargin="0"
+$(if advert-pending == 'yes')
+	onLoad="openAdvert()"
+$(endif)
+>
+	<div class="container">
+		<div class="row mt-10">
+		<p style=" margin-top:-30px">
+    <br><div style="text-align: center;">Welcom $(username)</div>
+    <div style="padding:10px;"><a class="a" id="cek" href="./detail.html"></a></div>
+    <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+    <div style='display:none;'>  Voucher Code <b><font color="#0dbbdb"><class id="user">$(username)</b></font></div>
+     <p style="margin-top:-15px">
+	 <table class="table table-bordered table-hover mr-b-10">  
+    <tr class="success">
+                      <td style="width: 40%;">Username</td>
+                      <td>$(username)</td>
+                    </tr>
+                     <tr class="danger">
+                      <td>IP Address</td>
+                      <td>$(ip)</td>
+                    </tr>
+                    <tr class="warning">
+                    </tr>
+                    $(if session-time-left)
+                      <tr class="active">
+                      <td>Connected / left</td>
+                      <td>$(uptime) / $(session-time-left)</td>
+                    </tr>
+                    $(else)
+                    <tr class="mks">
+                      <td>Connected</td>
+                      <td>$(uptime)</td>
+                    </tr>
+                    $(endif)
+                    <tr class="active">
+                      <td>Up | Down</td>
+                      <td>$(bytes-out-nice) / $(bytes-in-nice)</td>
+                    </tr>
+                    $(if limit-bytes-total)
+                    <tr class="success">
+                      <td>WELCOM</td>
+                      <td>$(if limit-bytes-total) 
+                        <script language=javascript>result = ($(limit-bytes-total)/1000000).toFixed(2)
+                        document.write(result)</script> MiB
+                        $(endif)
+                        $(if limit-bytes-total == '')Unlimited$(endif)</td>   $(endif)
+                    </tr>                  
+                    <tr class="mks">
+                      <td>Refresh</td>
+                      <td>$(refresh-timeout)</td>
+                    </tr>
+                 
+            <tr class="danger">
+        <td>Expired</td>
+            <td style="padding-top:0px; padding-left:2px;"><iframe id="exp" frameborder="0" scrolling="no" src="about:blank"></iframe></td>
+        </tr>
+    
+        </table>
+     
+        <button type="submit" class="btn btn-lg btn-danger btn-block">Logout</button>
+       
+    </form>
+	<p style=" text-align:center;margin-top:5px">
+<marquee ><class="running-text text-info" direction="left" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start() ">
+				<font color="#ddd">Now you can enjoy unlimited internet services at affordable prices with us ; <a href="about.html"><font color="#fff"><b></b></a>
+					</marquee>
+					
+					</table><p style=" text-align:center;margin-top:-15px">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p style=" text-align:center;margin-top:-20px">
+<div class="copy text-center"><font color="#ddd">PAK NET &copy; 2020<br/> Design by  <font color="#fff">Ali </font></a></font></div> 
+</div> 
+<script type="text/javascript">
+//get vaidity
+    var usr = document.getElementById('user').innerHTML
+    var url = "https://xxxxx.mikhmon.online/status/status.php?name="; // http://ip-server-mikhmon/mikhmonv2/status/status.php?name=
+    var SessionName = "mks"
+    var getvalid = url+usr+"&session="+SessionName
+    document.getElementById('exp').src = getvalid;	
+// jika kurang jelas silakan kunjungi https://laksa19.github.io/tuttorial.html	
+</script>
+
+</body>
+</html>
+</body>
+</html>
